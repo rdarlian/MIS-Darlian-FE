@@ -105,8 +105,14 @@
 
       <div class="bg-white p-4 rounded-lg">
         <DataTable
-          :data="products"
           :columns="columns"
+          :options="{
+            paging: true,
+            searching: true,
+            serverSide: true,
+          }"
+          :ajax="getData"
+          :order="defaultOrder"
           class="display stripe hover table-auto w-full text-left cell-border compact stripe text-lg"
         >
           <template #action="props">
@@ -141,22 +147,29 @@ import { useRouter } from "vue-router";
 import setAuthHeader from "@/utils/setAuthHeader";
 import EditBarang from "./EditBarang.vue";
 
+import $ from "jquery";
+
 DataTable.use(DataTablesCore);
 
 const router = useRouter();
 const products = ref([]);
+
 const columns = [
-  {
-    data: null,
-    render: function (data, type, row, meta) {
-      return meta.row + 1;
-    },
-    className: "bg-white border-b",
-  },
-  { data: "kode_barang", className: "bg-white border-b" },
-  { data: "nama_barang", className: "bg-white border-b" },
-  { data: "stok", className: "bg-white border-b" },
-  { data: "harga", className: "bg-white border-b" },
+  // {
+  //   title: "NO",
+  //   data: null,
+  //   render: function (data, type, row, meta) {
+  //     return meta.row + 1;
+  //   },
+  // },
+  { title: "ID", data: "id" },
+  { title: "Nama Barang", data: "nama_barang" },
+  { title: "Kode Barang", data: "kode_barang" },
+  { title: "Stok", data: "stok" },
+  { title: "Harga", data: "harga" },
+  { title: "User", data: "user" },
+  { title: "Created At", data: "created_at" },
+  { title: "Updated At", data: "updated_at" },
   {
     data: null,
     render: {
@@ -166,6 +179,8 @@ const columns = [
     title: "Action",
   },
 ];
+
+const defaultOrder = [[0, "asc"]];
 
 const token = localStorage.getItem("token");
 const headers = {
@@ -178,7 +193,6 @@ const getInventory = async () => {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   });
-  console.log(response.data.result.data);
   products.value = response.data.result.data;
 };
 onMounted(() => {
@@ -194,12 +208,41 @@ const deleteBarang = async (id) => {
   window.location.reload();
 };
 
-const logout = () => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("user");
-
-  router.push("/login");
+const logout = async () => {
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  await axios.post("/api/logout").then((response) => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    router.push("/login");
+  });
 };
+
+async function getData(data, callback, settings) {
+  try {
+    const response = await axios.get("/api/barang", {
+      params: {
+        draw: data.draw,
+        start: data.start,
+        length: data.length,
+        search: data.search.value,
+        order: data.order,
+      },
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+    console.log(response);
+
+    callback({
+      draw: response.data.draw,
+      recordsFiltered: response.data.recordsFiltered,
+      recordsTotal: response.data.recordsTotal,
+      data: response.data.data,
+    });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>

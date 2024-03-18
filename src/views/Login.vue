@@ -27,8 +27,9 @@
 import { ref, reactive } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
-const router = useRouter();
 import setAuthHeader from "@/utils/setAuthHeader";
+
+const router = useRouter();
 
 const data = ref({
   //state loggedIn with localStorage

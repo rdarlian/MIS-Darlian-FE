@@ -1,0 +1,154 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "nama_barang": "Penghapus Rindu",
+      "kode_barang": "T001",
+      "stok": 12,
+      "harga": 1000,
+      "user": "darlian",
+      "created_at": "2024-03-09T16:16:32.000000Z",
+      "updated_at": "2024-03-09T16:16:32.000000Z"
+    },
+    {
+      "id": 2,
+      "nama_barang": "Penulis Takdir",
+      "kode_barang": "T002",
+      "stok": 12,
+      "harga": 1000,
+      "user": "darlian",
+      "created_at": "2024-03-09T16:17:02.000000Z",
+      "updated_at": "2024-03-09T16:17:02.000000Z"
+    },
+    {
+      "id": 4,
+      "nama_barang": "Sepidol Man",
+      "kode_barang": "T003",
+      "stok": 12,
+      "harga": 1000,
+      "user": "darlian",
+      "created_at": "2024-03-12T16:50:51.000000Z",
+      "updated_at": "2024-03-12T16:50:51.000000Z"
+    },
+    {
+      "id": 5,
+      "nama_barang": "Sepidol Man1",
+      "kode_barang": "T005",
+      "stok": 12,
+      "harga": 1000,
+      "user": "darlian",
+      "created_at": "2024-03-12T17:13:55.000000Z",
+      "updated_at": "2024-03-12T17:13:55.000000Z"
+    },
+    {
+      "id": 7,
+      "nama_barang": "bantal",
+      "kode_barang": "B001",
+      "stok": 1,
+      "harga": 20000,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:07:26.000000Z",
+      "updated_at": "2024-03-12T18:07:26.000000Z"
+    },
+    {
+      "id": 8,
+      "nama_barang": "barang",
+      "kode_barang": "B002",
+      "stok": 1,
+      "harga": 20000,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:15:26.000000Z",
+      "updated_at": "2024-03-12T18:15:26.000000Z"
+    },
+    {
+      "id": 9,
+      "nama_barang": "Kwitansi Buku",
+      "kode_barang": "K001",
+      "stok": 12,
+      "harga": 5000,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:16:53.000000Z",
+      "updated_at": "2024-03-12T18:16:53.000000Z"
+    },
+    {
+      "id": 12,
+      "nama_barang": "Pisau",
+      "kode_barang": "P001",
+      "stok": 1,
+      "harga": 3500,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:23:21.000000Z",
+      "updated_at": "2024-03-12T18:23:21.000000Z"
+    },
+    {
+      "id": 13,
+      "nama_barang": "Galon",
+      "kode_barang": "G01",
+      "stok": 2,
+      "harga": 2000,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:24:08.000000Z",
+      "updated_at": "2024-03-12T18:24:08.000000Z"
+    },
+    {
+      "id": 14,
+      "nama_barang": "karambol",
+      "kode_barang": "K0101",
+      "stok": 3,
+      "harga": 56000,
+      "user": "darlian",
+      "created_at": "2024-03-12T18:26:45.000000Z",
+      "updated_at": "2024-03-12T18:26:45.000000Z"
+    },
+    {
+      "id": 11,
+      "nama_barang": "Boneks",
+      "kode_barang": "B0014",
+      "stok": 2,
+      "harga": 3000,
+      "user": "rama",
+      "created_at": "2024-03-12T18:19:13.000000Z",
+      "updated_at": "2024-03-13T02:13:30.000000Z"
+    },
+    {
+      "id": 15,
+      "nama_barang": "Buku Gambar",
+      "kode_barang": "BK01",
+      "stok": 10,
+      "harga": 5500,
+      "user": "darlian",
+      "created_at": "2024-03-16T14:56:09.000000Z",
+      "updated_at": "2024-03-16T14:56:09.000000Z"
+    },
+    {
+      "id": 16,
+      "nama_barang": "Kutek",
+      "kode_barang": "KU02",
+      "stok": 14,
+      "harga": 4500,
+      "user": "darlian",
+      "created_at": "2024-03-16T14:56:51.000000Z",
+      "updated_at": "2024-03-16T14:56:51.000000Z"
+    },
+    {
+      "id": 17,
+      "nama_barang": "Gunting",
+      "kode_barang": "G001",
+      "stok": 40,
+      "harga": 4000,
+      "user": "darlian",
+      "created_at": "2024-03-16T14:57:10.000000Z",
+      "updated_at": "2024-03-16T14:57:10.000000Z"
+    },
+    {
+      "id": 18,
+      "nama_barang": "Gunting Paku",
+      "kode_barang": "GP01",
+      "stok": 2,
+      "harga": 5000,
+      "user": "darlian",
+      "created_at": "2024-03-16T14:57:37.000000Z",
+      "updated_at": "2024-03-16T14:57:37.000000Z"
+    }
+  ]
+}
